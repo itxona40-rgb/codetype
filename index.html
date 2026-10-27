@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CodeType — yozish va kod tezligi</title>
+<meta name="description" content="CodeType: matn va dasturlash kodini tez yozish mashqi">
+<meta name="theme-color" content="#0f1a22">
+<link rel="canonical" href="https://codetype.uz/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%8C%A8%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CodeType — kod yozish tezligi">
+<meta property="og:description" content="Matn va dasturlash kodini tez yozish mashqi: wpm, aniqlik, combo va raqib bilan poyga.">
+<meta property="og:url" content="https://codetype.uz/">
+<meta name="twitter:card" content="summary">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Sora:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/contest.css">
+<link rel="stylesheet" href="css/learn.css">
+<link rel="stylesheet" href="css/games.css">
+</head>
+<body>
+<main>
+<noscript><p>CodeType ishlashi uchun JavaScript yoqilgan bo‘lishi kerak.</p></noscript>
+<header><h1>Code<b>Type</b></h1>
+<div class="tools"><button id="bs" title="Statistika" aria-label="Statistika">📊</button><button id="bsn" title="Tovush" aria-label="Tovush"></button><button id="fm" aria-label="Shriftni kichraytirish">A−</button><button id="fp" aria-label="Shriftni kattalashtirish">A+</button><details id="thd"><summary title="Mavzu" aria-label="Mavzu">🎨</summary><span class="tools" id="th"></span></details></div></header><div id="xpb"><span id="xl"></span><div><i id="xf"></i></div></div>
+<div class="row" id="modes"></div>
+<div class="row" id="opts"></div>
+<div class="row" id="tg"></div>
+<div class="row" id="sr"></div>
+<div class="live"><div><span id="wpm">0</span><small>wpm</small></div><div><span id="acc">100</span><small>% aniqlik</small></div><div><span id="tm">0</span><small>soniya</small></div><span id="cb"></span></div>
+<div id="race"><span>Siz</span><div><i id="me"></i></div><span id="bn"></span><div><i id="bt"></i></div></div>
+<div id="box" tabindex="0" aria-label="Yozish maydoni"><pre id="code"></pre></div>
+<div id="hint"></div>
+<div id="kb"></div>
+<section id="res" class="card">
+<p id="rm"></p>
+<div class="grid"><div id="rw">0<span>wpm</span></div><div id="ra">0<span>aniqlik</span></div><div id="rt">0<span>soniya</span></div><div id="re">0<span>xatolar</span></div><div id="rc">0<span>eng uzun combo</span></div><div id="rr">0<span>raw wpm</span></div><div id="rs">0<span>barqarorlik</span></div></div>
+<div id="ch"></div><p id="rk"></p>
+<button class="cta" id="again">↻ Yangi matn</button><button class="cta" id="retry">↺ Shu matnni qayta yozish</button><button id="cp">Natijani nusxalash</button>
+</section>
+<section id="cu" class="card"><strong>O‘z kodingiz</strong><p>Mashq qilmoqchi bo‘lgan kodni shu yerga qo‘ying.</p><textarea id="cta" rows="6" spellcheck="false"></textarea><button class="cta" id="cgo">Boshlash</button></section><section id="st" class="card"></section><section id="sv" class="card"></section>
+<footer id="ft"></footer></main>
+<script src="js/app.js"></script>
+<script src="js/config.js"></script>
+<script src="js/contest.js"></script>
+<script src="js/learn.js"></script>
+<script src="js/games.js"></script>
+</body>
+</html>

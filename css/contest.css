@@ -1,0 +1,74 @@
+#ov{position:fixed;inset:0;z-index:30;display:none;overflow:auto;background:var(--bg);padding:calc(24px + env(safe-area-inset-top,0px)) 16px 40px}
+#ov.on{display:block}
+#ov::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(circle at 12% 8%,color-mix(in srgb,var(--acc) 22%,transparent),transparent 45%),radial-gradient(circle at 88% 92%,color-mix(in srgb,var(--bad) 18%,transparent),transparent 45%)}
+body.gate main{filter:blur(8px)}
+.gw{max-width:460px;margin:5vh auto 0;text-align:center}
+.gw.wide{max-width:920px;text-align:left;margin-top:2vh}
+.gw h1{font-size:2.6rem;margin:0 0 6px}
+.gw h2,.hd h2{font-size:1.4rem;margin:0 0 6px}
+.sb{color:var(--dim);font-size:.9rem;margin:4px 0 14px}
+.rc{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}
+.rc button{display:flex;flex-direction:column;align-items:center;gap:6px;padding:30px 14px;border-radius:16px;font-family:Sora,sans-serif;color:var(--ink);background:linear-gradient(145deg,var(--panel),var(--bg));box-shadow:0 22px 44px -28px var(--acc);transition:transform .15s,border-color .15s}
+.rc button:hover{transform:translateY(-3px);border-color:var(--acc)}
+.rc span{font-size:2.4rem}.rc b{font-size:1rem}.rc small{color:var(--dim);font-weight:400;font-size:.78rem}
+.ci{width:100%;font:600 1rem "JetBrains Mono",monospace;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:6px 0 12px}
+.ci:focus{outline:2px solid var(--acc);outline-offset:1px}
+.ci.big{font-size:1.9rem;text-align:center;letter-spacing:.4em;padding:16px 6px 16px 14px}
+.gw .cta{width:100%;margin:0 0 10px}.gw>button:not(.cta){width:100%}
+.er{color:var(--bad);min-height:1.3em;font-size:.85rem;margin-bottom:6px}.ok{color:var(--acc);font-size:.85rem}
+.wn{border:1px solid var(--bad);border-radius:10px;padding:10px 14px;font-size:.84rem}
+.hd{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.g2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.g2 .card,.gw.wide .card{margin-top:16px}
+.card label{display:block;font-size:.76rem;color:var(--dim);margin-top:8px}
+.code{font:700 2.1rem "JetBrains Mono",monospace;letter-spacing:.25em;color:var(--acc);margin:10px 0;text-shadow:0 0 18px color-mix(in srgb,var(--acc) 50%,transparent)}
+.pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;margin:18px 0}
+.pg button{display:flex;flex-direction:column;gap:2px;padding:12px;text-align:left;color:var(--ink);font-family:Sora,sans-serif}
+.pg small{color:var(--dim);font-weight:400}
+.tb{display:flex;gap:6px;margin:10px 0}
+.ln{display:grid;grid-template-columns:minmax(90px,28%) 1fr 48px;gap:10px;align-items:center;font-size:.82rem;margin:7px 0}
+.ln>div{height:26px;background:var(--line);border-radius:13px}
+.ln i{display:block;height:100%;border-radius:13px;background:linear-gradient(90deg,transparent,var(--acc));position:relative;transition:width .6s}
+.ln b{position:absolute;right:-4px;top:-3px;font-size:1.25rem;transform:scaleX(-1)}
+.ln em{font-style:normal;font-weight:700;color:var(--acc);text-align:right}
+.tt{width:100%;border-collapse:collapse;margin-top:14px;font-size:.85rem}
+.tt th,.tt td{text-align:left;padding:7px 6px;border-bottom:1px solid var(--line)}.tt th{color:var(--dim);font-weight:500}
+.tt .me{color:var(--acc);font-weight:700}
+.sd{border-top:1px solid var(--line);padding:8px 0}
+.sd summary{display:flex;justify-content:space-between;gap:10px;cursor:pointer;font-size:.88rem}.sd summary span{color:var(--dim)}
+.sd p{font-size:.78rem;color:var(--dim);margin:4px 0}
+.ad{display:flex;gap:8px;margin-bottom:10px}.ad .ci{margin:0}
+#cbar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;padding:8px 12px;margin-bottom:14px;border:1px solid var(--line);border-radius:12px;background:var(--panel);font-size:.85rem}
+#cbar b{color:var(--acc)}#cbar span:last-child{display:flex;gap:6px}
+#cr{font-weight:600;margin:10px 0}
+@media (max-width:480px){.rc{grid-template-columns:1fr}.ci.big{font-size:1.5rem}}
+@media (prefers-reduced-motion:reduce){.ln i,.rc button{transition:none}}
+#rbar:empty{display:none}
+#rbar .card{margin:0 0 14px}
+#rbar .cta{margin-top:8px}
+#cst{color:var(--dim);font-size:.75rem;margin-left:6px}
+#rcn button{margin:4px 6px 4px 0}
+.chip{display:inline-block;margin:2px 4px 2px 0;padding:3px 10px;border-radius:99px;background:var(--panel);border:1px solid var(--line);font-size:.85rem}
+.pt{max-height:50vh;overflow:auto;margin-top:12px}
+#rcn button[disabled]{opacity:.45;cursor:not-allowed}
+body.locked #modes,body.locked #opts,body.locked #tg,body.locked #sr,body.locked #cu{display:none!important}
+body.rlock #again,body.rlock #race{display:none!important}
+#lkb{margin:0 0 14px;padding:10px 14px;border-radius:12px;border:1px solid var(--acc);background:var(--panel)}
+#lkb:empty{display:none}
+#lkb small{display:block;color:var(--dim);margin-top:2px}
+.ar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line)}
+.ar .an{flex:1 1 170px}
+.ar .an small{display:block;color:var(--dim)}
+.ar select.ci{width:auto;flex:0 0 auto;padding:6px 8px;font-size:.85rem}
+
+.gw.hm{max-width:900px}.gw.hm .rc{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+@media (max-width:680px){.gw.hm .rc{grid-template-columns:1fr}}
+.od{display:inline-block;width:10px;height:10px;margin-right:6px;border-radius:50%;background:var(--dim);vertical-align:middle;opacity:.7}
+.od.on{background:#3ddc97;opacity:1;box-shadow:0 0 8px #3ddc97}
+.onh{margin:8px 0;font-size:.9rem}.onh .od{margin-left:10px}.onh .od:first-child{margin-left:0}
+.onl{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:6px;max-height:260px;overflow:auto}
+.or{display:flex;align-items:center;gap:6px;padding:6px 10px;border-radius:10px;border:1px solid var(--line);font-size:.84rem}
+.or.on{border-color:#3ddc97}
+.or .od{margin:0;flex:none}.on_n{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.or small{color:var(--dim);font-size:.72rem;white-space:nowrap}
+.sd summary b .od{margin-right:7px}
